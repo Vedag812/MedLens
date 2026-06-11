@@ -1,0 +1,10 @@
+{
+    "name": "MedLens",
+    "short_name": "MedLens",
+    "description": "Point your camera at any medicine to identify it and check for drug interactions",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f1e",
+    "theme_color": "#0a0f1e",
+    "icons": []
+}

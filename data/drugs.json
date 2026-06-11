@@ -1,0 +1,808 @@
+{
+  "drugs": {
+    "paracetamol": {
+      "generic_name": "Paracetamol",
+      "brand_names": ["Dolo 650", "Crocin", "Calpol", "Pacimol", "P-650", "Metacin", "Pyrigesic"],
+      "category": "Analgesic / Antipyretic",
+      "description": "Used to relieve mild to moderate pain and reduce fever. Works by blocking pain signals in the brain.",
+      "common_dosage": "500mg - 1000mg every 4-6 hours",
+      "max_daily_dose": "4000mg (4g)",
+      "side_effects": ["Nausea", "Allergic skin rash", "Liver damage (overdose)"],
+      "warnings": ["Avoid alcohol", "Do not exceed 4g/day", "Caution in liver disease"]
+    },
+    "ibuprofen": {
+      "generic_name": "Ibuprofen",
+      "brand_names": ["Brufen", "Ibugesic", "Combiflam (with paracetamol)", "Advil"],
+      "category": "NSAID (Non-Steroidal Anti-Inflammatory Drug)",
+      "description": "Reduces pain, inflammation, and fever. Works by blocking COX enzymes that produce prostaglandins.",
+      "common_dosage": "200mg - 400mg every 6-8 hours",
+      "max_daily_dose": "1200mg (OTC) / 3200mg (prescription)",
+      "side_effects": ["Stomach pain", "Nausea", "Dizziness", "Increased bleeding risk"],
+      "warnings": ["Take with food", "Avoid in kidney disease", "Not for children under 6 months"]
+    },
+    "aspirin": {
+      "generic_name": "Aspirin (Acetylsalicylic Acid)",
+      "brand_names": ["Disprin", "Ecosprin", "Loprin", "Aspro"],
+      "category": "NSAID / Antiplatelet",
+      "description": "Used for pain relief, fever reduction, and to prevent blood clots. Low-dose aspirin is used for heart attack prevention.",
+      "common_dosage": "75mg - 325mg daily (cardiac); 500mg - 1000mg (pain)",
+      "max_daily_dose": "4000mg",
+      "side_effects": ["Stomach irritation", "Bleeding", "Tinnitus (ringing in ears)"],
+      "warnings": ["Not for children under 16 (Reye's syndrome)", "Avoid before surgery", "Take with food"]
+    },
+    "amoxicillin": {
+      "generic_name": "Amoxicillin",
+      "brand_names": ["Mox", "Amoxil", "Novamox", "Cipmox", "Amoxyclav (with clavulanate)"],
+      "category": "Antibiotic (Penicillin)",
+      "description": "Treats bacterial infections of the ear, nose, throat, urinary tract, and skin. Does NOT work against viruses.",
+      "common_dosage": "250mg - 500mg every 8 hours",
+      "max_daily_dose": "3000mg",
+      "side_effects": ["Diarrhea", "Nausea", "Skin rash", "Allergic reactions"],
+      "warnings": ["Complete the full course", "Check for penicillin allergy", "May reduce birth control effectiveness"]
+    },
+    "azithromycin": {
+      "generic_name": "Azithromycin",
+      "brand_names": ["Azithral", "Zithromax", "Azee", "Azifast"],
+      "category": "Antibiotic (Macrolide)",
+      "description": "Treats bacterial infections including respiratory, skin, ear, and sexually transmitted infections.",
+      "common_dosage": "500mg on day 1, then 250mg for 4 days",
+      "max_daily_dose": "500mg",
+      "side_effects": ["Diarrhea", "Nausea", "Abdominal pain", "Headache"],
+      "warnings": ["Can cause heart rhythm changes", "Complete the full course", "Avoid antacids within 2 hours"]
+    },
+    "metformin": {
+      "generic_name": "Metformin",
+      "brand_names": ["Glycomet", "Glucophage", "Obimet", "Walaphage", "Glyciphage"],
+      "category": "Antidiabetic (Biguanide)",
+      "description": "First-line treatment for Type 2 diabetes. Lowers blood sugar by reducing glucose production in the liver and improving insulin sensitivity.",
+      "common_dosage": "500mg - 1000mg twice daily",
+      "max_daily_dose": "2550mg",
+      "side_effects": ["Nausea", "Diarrhea", "Metallic taste", "Vitamin B12 deficiency (long-term)"],
+      "warnings": ["Take with meals", "Avoid alcohol", "Stop before contrast dye procedures"]
+    },
+    "amlodipine": {
+      "generic_name": "Amlodipine",
+      "brand_names": ["Amlong", "Amlokind", "Norvasc", "Amlopress", "Stamlo"],
+      "category": "Calcium Channel Blocker (Antihypertensive)",
+      "description": "Treats high blood pressure and chest pain (angina). Relaxes blood vessels to improve blood flow.",
+      "common_dosage": "5mg - 10mg once daily",
+      "max_daily_dose": "10mg",
+      "side_effects": ["Swollen ankles", "Flushing", "Headache", "Dizziness"],
+      "warnings": ["Do not stop suddenly", "Avoid grapefruit juice", "Monitor blood pressure regularly"]
+    },
+    "atorvastatin": {
+      "generic_name": "Atorvastatin",
+      "brand_names": ["Atorva", "Lipitor", "Tonact", "Aztor", "Atocor"],
+      "category": "Statin (Cholesterol-lowering)",
+      "description": "Lowers LDL (bad) cholesterol and triglycerides. Reduces risk of heart attack and stroke.",
+      "common_dosage": "10mg - 80mg once daily",
+      "max_daily_dose": "80mg",
+      "side_effects": ["Muscle pain", "Headache", "Nausea", "Liver enzyme elevation"],
+      "warnings": ["Take at the same time daily", "Avoid grapefruit", "Report unexplained muscle pain immediately"]
+    },
+    "omeprazole": {
+      "generic_name": "Omeprazole",
+      "brand_names": ["Omez", "Prilosec", "Ocid", "Omesec"],
+      "category": "Proton Pump Inhibitor (PPI)",
+      "description": "Reduces stomach acid production. Treats acid reflux (GERD), ulcers, and Zollinger-Ellison syndrome.",
+      "common_dosage": "20mg - 40mg once daily",
+      "max_daily_dose": "40mg (OTC) / 360mg (ZE syndrome)",
+      "side_effects": ["Headache", "Nausea", "Diarrhea", "Vitamin B12 deficiency (long-term)"],
+      "warnings": ["Take 30 min before meals", "Long-term use may weaken bones", "May mask stomach cancer symptoms"]
+    },
+    "pantoprazole": {
+      "generic_name": "Pantoprazole",
+      "brand_names": ["Pan 40", "Pantocid", "Pantop", "Nupenta"],
+      "category": "Proton Pump Inhibitor (PPI)",
+      "description": "Reduces stomach acid. Used for GERD, erosive esophagitis, and peptic ulcers.",
+      "common_dosage": "40mg once daily",
+      "max_daily_dose": "80mg",
+      "side_effects": ["Headache", "Diarrhea", "Nausea", "Joint pain"],
+      "warnings": ["Take before breakfast", "Long-term use may cause magnesium deficiency"]
+    },
+    "cetirizine": {
+      "generic_name": "Cetirizine",
+      "brand_names": ["Cetzine", "Zyrtec", "Alerid", "Okacet"],
+      "category": "Antihistamine (2nd generation)",
+      "description": "Treats allergies, hay fever, and hives. Relieves sneezing, runny nose, and itchy eyes.",
+      "common_dosage": "10mg once daily",
+      "max_daily_dose": "10mg",
+      "side_effects": ["Drowsiness", "Dry mouth", "Fatigue", "Headache"],
+      "warnings": ["May cause drowsiness — avoid driving", "Avoid alcohol"]
+    },
+    "montelukast": {
+      "generic_name": "Montelukast",
+      "brand_names": ["Montair", "Singulair", "Montek LC", "Romilast"],
+      "category": "Leukotriene Receptor Antagonist",
+      "description": "Prevents asthma attacks and relieves seasonal allergy symptoms. Blocks leukotrienes that cause airway swelling.",
+      "common_dosage": "10mg once daily (evening)",
+      "max_daily_dose": "10mg",
+      "side_effects": ["Headache", "Stomach pain", "Fatigue"],
+      "warnings": ["Take in the evening", "FDA warning: may cause mood/behavior changes", "Not for acute asthma attacks"]
+    },
+    "warfarin": {
+      "generic_name": "Warfarin",
+      "brand_names": ["Warf", "Coumadin", "Acitrom (acenocoumarol — similar)"],
+      "category": "Anticoagulant (Blood Thinner)",
+      "description": "Prevents blood clots in veins and arteries. Used after heart valve replacement, DVT, pulmonary embolism, and atrial fibrillation.",
+      "common_dosage": "2mg - 10mg daily (dose varies by INR)",
+      "max_daily_dose": "Individualized by INR monitoring",
+      "side_effects": ["Bleeding", "Bruising", "Blood in urine/stool"],
+      "warnings": ["Regular INR monitoring required", "Many food and drug interactions", "Avoid sudden diet changes (vitamin K)"]
+    },
+    "clopidogrel": {
+      "generic_name": "Clopidogrel",
+      "brand_names": ["Plavix", "Clopilet", "Deplatt", "Clavix"],
+      "category": "Antiplatelet Agent",
+      "description": "Prevents blood clots after heart attack, stroke, or stent placement. Works by stopping platelets from sticking together.",
+      "common_dosage": "75mg once daily",
+      "max_daily_dose": "75mg",
+      "side_effects": ["Bleeding", "Bruising", "Stomach pain", "Diarrhea"],
+      "warnings": ["Do not stop without doctor's advice", "Avoid with omeprazole", "Inform dentist/surgeon before procedures"]
+    },
+    "losartan": {
+      "generic_name": "Losartan",
+      "brand_names": ["Losar", "Cozaar", "Losacar", "Repace"],
+      "category": "ARB (Angiotensin Receptor Blocker)",
+      "description": "Treats high blood pressure and protects kidneys in diabetic patients. Relaxes blood vessels.",
+      "common_dosage": "50mg - 100mg once daily",
+      "max_daily_dose": "100mg",
+      "side_effects": ["Dizziness", "Back pain", "Fatigue", "High potassium"],
+      "warnings": ["Do NOT use during pregnancy", "Monitor potassium levels", "Stay hydrated"]
+    },
+    "metoprolol": {
+      "generic_name": "Metoprolol",
+      "brand_names": ["Betaloc", "Metolar", "Lopresor", "Met XL"],
+      "category": "Beta Blocker",
+      "description": "Treats high blood pressure, chest pain (angina), and heart failure. Slows heart rate and reduces heart workload.",
+      "common_dosage": "25mg - 100mg twice daily",
+      "max_daily_dose": "400mg",
+      "side_effects": ["Fatigue", "Dizziness", "Cold hands/feet", "Slow heartbeat"],
+      "warnings": ["Do not stop suddenly (rebound hypertension)", "May mask low blood sugar symptoms in diabetics"]
+    },
+    "ciprofloxacin": {
+      "generic_name": "Ciprofloxacin",
+      "brand_names": ["Ciplox", "Cifran", "Ciprobid"],
+      "category": "Antibiotic (Fluoroquinolone)",
+      "description": "Treats urinary tract infections, respiratory infections, and gastrointestinal infections.",
+      "common_dosage": "250mg - 500mg twice daily",
+      "max_daily_dose": "1500mg",
+      "side_effects": ["Nausea", "Diarrhea", "Dizziness", "Tendon damage (rare)"],
+      "warnings": ["Avoid dairy products within 2 hours", "FDA black box warning for tendon rupture", "Avoid in children"]
+    },
+    "diclofenac": {
+      "generic_name": "Diclofenac",
+      "brand_names": ["Voveran", "Voltaren", "Diclogesic", "Reactin"],
+      "category": "NSAID",
+      "description": "Treats pain, inflammation, and swelling from arthritis, sprains, and menstrual cramps.",
+      "common_dosage": "50mg 2-3 times daily",
+      "max_daily_dose": "150mg",
+      "side_effects": ["Stomach pain", "Nausea", "Headache", "Increased heart risk"],
+      "warnings": ["Take with food", "Avoid in heart disease", "Not for long-term use without monitoring"]
+    },
+    "ranitidine": {
+      "generic_name": "Ranitidine",
+      "brand_names": ["Rantac", "Zinetac", "Aciloc", "Zantac"],
+      "category": "H2 Blocker",
+      "description": "Reduces stomach acid production. Used for heartburn, acid reflux, and stomach ulcers.",
+      "common_dosage": "150mg twice daily or 300mg at bedtime",
+      "max_daily_dose": "300mg",
+      "side_effects": ["Headache", "Dizziness", "Constipation"],
+      "warnings": ["FDA recall in 2020 for NDMA contamination — check with pharmacist for availability"]
+    },
+    "levothyroxine": {
+      "generic_name": "Levothyroxine",
+      "brand_names": ["Thyronorm", "Eltroxin", "Thyrox", "Lethyrox"],
+      "category": "Thyroid Hormone",
+      "description": "Replaces thyroid hormone in hypothyroidism. Regulates metabolism, energy, and body temperature.",
+      "common_dosage": "25mcg - 200mcg once daily",
+      "max_daily_dose": "Individualized",
+      "side_effects": ["Weight loss", "Tremor", "Headache", "Insomnia (if dose too high)"],
+      "warnings": ["Take on empty stomach 30-60 min before breakfast", "Avoid calcium/iron supplements within 4 hours"]
+    },
+    "salbutamol": {
+      "generic_name": "Salbutamol (Albuterol)",
+      "brand_names": ["Asthalin", "Ventolin", "Derihaler"],
+      "category": "Bronchodilator (Beta-2 Agonist)",
+      "description": "Quick-relief inhaler for asthma and COPD. Opens airways within minutes during an attack.",
+      "common_dosage": "100mcg - 200mcg inhaled as needed",
+      "max_daily_dose": "800mcg",
+      "side_effects": ["Tremor", "Rapid heartbeat", "Headache", "Nervousness"],
+      "warnings": ["Rinse mouth after use", "If using more than 3 times/week, see doctor", "Not a long-term controller"]
+    },
+    "prednisolone": {
+      "generic_name": "Prednisolone",
+      "brand_names": ["Wysolone", "Omnacortil", "Deltacortril"],
+      "category": "Corticosteroid",
+      "description": "Treats inflammation, allergies, asthma, and autoimmune conditions. Suppresses the immune system.",
+      "common_dosage": "5mg - 60mg daily (varies widely)",
+      "max_daily_dose": "Varies by condition",
+      "side_effects": ["Weight gain", "Mood changes", "Increased blood sugar", "Weakened bones"],
+      "warnings": ["Do not stop suddenly (taper required)", "Increases infection risk", "Long-term use causes serious side effects"]
+    },
+    "glimepiride": {
+      "generic_name": "Glimepiride",
+      "brand_names": ["Amaryl", "Glimestar", "Glimy"],
+      "category": "Sulfonylurea (Antidiabetic)",
+      "description": "Lowers blood sugar by stimulating the pancreas to produce more insulin. Used in Type 2 diabetes.",
+      "common_dosage": "1mg - 4mg once daily",
+      "max_daily_dose": "8mg",
+      "side_effects": ["Hypoglycemia (low blood sugar)", "Weight gain", "Nausea", "Dizziness"],
+      "warnings": ["Take with breakfast", "Carry sugar/glucose tablets", "Avoid skipping meals"]
+    },
+    "telmisartan": {
+      "generic_name": "Telmisartan",
+      "brand_names": ["Telma", "Micardis", "Telmikind", "Telvas"],
+      "category": "ARB (Angiotensin Receptor Blocker)",
+      "description": "Treats high blood pressure. Protects heart and kidneys in high-risk patients.",
+      "common_dosage": "20mg - 80mg once daily",
+      "max_daily_dose": "80mg",
+      "side_effects": ["Dizziness", "Back pain", "Diarrhea", "High potassium"],
+      "warnings": ["Do NOT use in pregnancy", "Monitor kidney function", "Avoid potassium supplements"]
+    },
+    "domperidone": {
+      "generic_name": "Domperidone",
+      "brand_names": ["Domstal", "Motilium", "Vomistop"],
+      "category": "Antiemetic / Prokinetic",
+      "description": "Treats nausea and vomiting. Speeds up stomach emptying.",
+      "common_dosage": "10mg three times daily",
+      "max_daily_dose": "30mg",
+      "side_effects": ["Dry mouth", "Headache", "Abdominal cramps"],
+      "warnings": ["Not recommended for long-term use", "Rare cardiac rhythm changes"]
+    },
+    "dextromethorphan": {
+      "generic_name": "Dextromethorphan",
+      "brand_names": ["Benadryl DR", "Robitussin", "Dextocin", "Alex"],
+      "category": "Antitussive (Cough Suppressant)",
+      "description": "Suppresses dry cough by acting on the cough center in the brain. Does not treat underlying cause.",
+      "common_dosage": "10mg - 20mg every 4 hours",
+      "max_daily_dose": "120mg",
+      "side_effects": ["Drowsiness", "Dizziness", "Nausea"],
+      "warnings": ["Do not use for productive (wet) cough", "Avoid with MAO inhibitors"]
+    },
+    "tramadol": {
+      "generic_name": "Tramadol",
+      "brand_names": ["Ultracet (with paracetamol)", "Contramal", "Domadol"],
+      "category": "Opioid Analgesic",
+      "description": "Treats moderate to severe pain. Works on opioid receptors and inhibits serotonin/norepinephrine reuptake.",
+      "common_dosage": "50mg - 100mg every 4-6 hours",
+      "max_daily_dose": "400mg",
+      "side_effects": ["Nausea", "Dizziness", "Constipation", "Drowsiness", "Seizure risk"],
+      "warnings": ["Risk of addiction", "Do not mix with alcohol", "Avoid with SSRIs (serotonin syndrome risk)"]
+    },
+    "fluoxetine": {
+      "generic_name": "Fluoxetine",
+      "brand_names": ["Fludac", "Prozac", "Flunil"],
+      "category": "SSRI (Antidepressant)",
+      "description": "Treats depression, OCD, panic disorder, and bulimia. Increases serotonin levels in the brain.",
+      "common_dosage": "20mg once daily",
+      "max_daily_dose": "80mg",
+      "side_effects": ["Nausea", "Insomnia", "Anxiety", "Sexual dysfunction", "Weight changes"],
+      "warnings": ["Takes 4-6 weeks for full effect", "Do not stop suddenly", "FDA black box warning: increased suicidality in young adults"]
+    },
+    "hydroxychloroquine": {
+      "generic_name": "Hydroxychloroquine",
+      "brand_names": ["HCQS", "Plaquenil", "HCQ"],
+      "category": "Antimalarial / DMARD",
+      "description": "Treats malaria, rheumatoid arthritis, and lupus. Modulates the immune system.",
+      "common_dosage": "200mg - 400mg daily",
+      "max_daily_dose": "400mg",
+      "side_effects": ["Nausea", "Headache", "Dizziness", "Retinal toxicity (long-term)"],
+      "warnings": ["Regular eye exams required (retinal damage risk)", "Can cause QT prolongation"]
+    },
+    "gabapentin": {
+      "generic_name": "Gabapentin",
+      "brand_names": ["Gabapin", "Neurontin", "Gabantin"],
+      "category": "Anticonvulsant / Neuropathic Pain Agent",
+      "description": "Treats nerve pain (neuropathy), seizures, and restless leg syndrome.",
+      "common_dosage": "300mg - 600mg three times daily",
+      "max_daily_dose": "3600mg",
+      "side_effects": ["Drowsiness", "Dizziness", "Fatigue", "Swelling in limbs"],
+      "warnings": ["Do not stop suddenly (may cause seizures)", "May impair driving", "Avoid alcohol"]
+    },
+    "fexofenadine": {
+      "generic_name": "Fexofenadine",
+      "brand_names": ["Allegra", "Fexova", "Altiva", "Fexofen"],
+      "category": "Antihistamine (Non-drowsy)",
+      "description": "Treats seasonal allergies and hives without causing drowsiness. A safer alternative to older antihistamines.",
+      "common_dosage": "120mg or 180mg once daily",
+      "max_daily_dose": "180mg",
+      "side_effects": ["Headache", "Nausea", "Back pain", "Drowsiness (rare)"],
+      "warnings": ["Avoid fruit juices (reduces absorption)", "Take with water"]
+    },
+    "cefixime": {
+      "generic_name": "Cefixime",
+      "brand_names": ["Zifi", "Taxim-O", "Cefix", "Mahacef"],
+      "category": "Antibiotic (Cephalosporin)",
+      "description": "Treats urinary tract infections, ear infections, throat infections, and gonorrhea.",
+      "common_dosage": "200mg twice daily or 400mg once daily",
+      "max_daily_dose": "400mg",
+      "side_effects": ["Diarrhea", "Stomach pain", "Nausea", "Headache"],
+      "warnings": ["Complete the full course", "Check for cephalosporin allergy", "May cause antibiotic-related diarrhea"]
+    },
+    "ofloxacin": {
+      "generic_name": "Ofloxacin",
+      "brand_names": ["Oflox", "Zenflox", "Zanocin", "Oflomac"],
+      "category": "Antibiotic (Fluoroquinolone)",
+      "description": "Treats UTIs, respiratory infections, skin infections, and certain STIs.",
+      "common_dosage": "200mg - 400mg twice daily",
+      "max_daily_dose": "800mg",
+      "side_effects": ["Nausea", "Diarrhea", "Headache", "Insomnia", "Tendon pain"],
+      "warnings": ["FDA black box warning for tendon rupture", "Avoid in myasthenia gravis", "Can cause photosensitivity"]
+    },
+    "levofloxacin": {
+      "generic_name": "Levofloxacin",
+      "brand_names": ["Levoflox", "Levomac", "Glevo", "Tavanic"],
+      "category": "Antibiotic (Fluoroquinolone)",
+      "description": "Treats pneumonia, sinusitis, UTIs, and skin infections. More potent than ofloxacin.",
+      "common_dosage": "500mg - 750mg once daily",
+      "max_daily_dose": "750mg",
+      "side_effects": ["Nausea", "Diarrhea", "Headache", "Dizziness", "Tendon damage"],
+      "warnings": ["FDA black box warning for tendon rupture and nerve damage", "Avoid in epilepsy", "Take 2 hours away from antacids"]
+    },
+    "doxycycline": {
+      "generic_name": "Doxycycline",
+      "brand_names": ["Doxycap", "Doxt-SL", "Doxy-1", "Microdox"],
+      "category": "Antibiotic (Tetracycline)",
+      "description": "Treats acne, respiratory infections, UTIs, malaria prevention, and tick-borne diseases.",
+      "common_dosage": "100mg once or twice daily",
+      "max_daily_dose": "200mg",
+      "side_effects": ["Nausea", "Sun sensitivity", "Esophageal irritation", "Yeast infections"],
+      "warnings": ["Take with plenty of water", "Avoid lying down for 30 min after taking", "Avoid sun exposure", "Not for children under 8"]
+    },
+    "amitriptyline": {
+      "generic_name": "Amitriptyline",
+      "brand_names": ["Tryptomer", "Sarotena", "Elavil"],
+      "category": "Tricyclic Antidepressant (TCA)",
+      "description": "Treats depression, nerve pain, migraine prevention, and insomnia at low doses.",
+      "common_dosage": "10mg - 75mg at bedtime",
+      "max_daily_dose": "150mg",
+      "side_effects": ["Drowsiness", "Dry mouth", "Constipation", "Weight gain", "Blurred vision"],
+      "warnings": ["Do not stop suddenly", "Avoid alcohol", "Can cause heart rhythm changes at high doses"]
+    },
+    "sertraline": {
+      "generic_name": "Sertraline",
+      "brand_names": ["Daxid", "Zoloft", "Sertima", "Serenata"],
+      "category": "SSRI (Antidepressant)",
+      "description": "Treats depression, anxiety, OCD, PTSD, and panic disorder. Generally well-tolerated.",
+      "common_dosage": "50mg - 200mg once daily",
+      "max_daily_dose": "200mg",
+      "side_effects": ["Nausea", "Diarrhea", "Insomnia", "Dizziness", "Sexual dysfunction"],
+      "warnings": ["Takes 4-6 weeks for full effect", "Do not stop suddenly", "Avoid with MAO inhibitors"]
+    },
+    "escitalopram": {
+      "generic_name": "Escitalopram",
+      "brand_names": ["Nexito", "Cipralex", "Stalopam", "Rexipra"],
+      "category": "SSRI (Antidepressant)",
+      "description": "Treats depression and generalized anxiety disorder. One of the best-tolerated SSRIs.",
+      "common_dosage": "10mg - 20mg once daily",
+      "max_daily_dose": "20mg",
+      "side_effects": ["Nausea", "Headache", "Insomnia", "Sexual dysfunction", "Fatigue"],
+      "warnings": ["Do not stop suddenly", "Avoid alcohol", "Can cause QT prolongation at high doses"]
+    },
+    "clonazepam": {
+      "generic_name": "Clonazepam",
+      "brand_names": ["Clonotril", "Rivotril", "Epitril", "Zapiz"],
+      "category": "Benzodiazepine (Anxiolytic / Anticonvulsant)",
+      "description": "Treats seizures, panic disorder, and anxiety. Works by enhancing GABA activity in the brain.",
+      "common_dosage": "0.25mg - 2mg twice daily",
+      "max_daily_dose": "20mg",
+      "side_effects": ["Drowsiness", "Dizziness", "Memory problems", "Coordination issues"],
+      "warnings": ["High risk of dependence", "Do not stop suddenly (seizure risk)", "Avoid alcohol", "Do not drive"]
+    },
+    "alprazolam": {
+      "generic_name": "Alprazolam",
+      "brand_names": ["Alprax", "Xanax", "Trika", "Restyl"],
+      "category": "Benzodiazepine (Anxiolytic)",
+      "description": "Treats anxiety and panic attacks. Fast-acting but high potential for dependence.",
+      "common_dosage": "0.25mg - 0.5mg three times daily",
+      "max_daily_dose": "4mg",
+      "side_effects": ["Drowsiness", "Fatigue", "Memory impairment", "Coordination issues"],
+      "warnings": ["Highly addictive", "Do not stop suddenly", "Never mix with alcohol or opioids", "Short-term use only"]
+    },
+    "rosuvastatin": {
+      "generic_name": "Rosuvastatin",
+      "brand_names": ["Rosuvas", "Crestor", "Rozavel", "Rosulip"],
+      "category": "Statin (Cholesterol-lowering)",
+      "description": "Lowers LDL cholesterol and triglycerides. More potent than atorvastatin at lower doses.",
+      "common_dosage": "5mg - 40mg once daily",
+      "max_daily_dose": "40mg",
+      "side_effects": ["Muscle pain", "Headache", "Nausea", "Weakness"],
+      "warnings": ["Report unexplained muscle pain", "Regular liver function tests", "Avoid in pregnancy"]
+    },
+    "sitagliptin": {
+      "generic_name": "Sitagliptin",
+      "brand_names": ["Januvia", "Istavel", "Sitaday"],
+      "category": "DPP-4 Inhibitor (Antidiabetic)",
+      "description": "Treats Type 2 diabetes by increasing incretin hormones that stimulate insulin release after meals.",
+      "common_dosage": "100mg once daily",
+      "max_daily_dose": "100mg",
+      "side_effects": ["Headache", "Nasopharyngitis", "Upper respiratory infection"],
+      "warnings": ["Dose adjustment needed in kidney disease", "Rare risk of pancreatitis"]
+    },
+    "insulin_glargine": {
+      "generic_name": "Insulin Glargine",
+      "brand_names": ["Lantus", "Basalog", "Glaritus", "Toujeo"],
+      "category": "Long-acting Insulin",
+      "description": "Provides 24-hour basal insulin coverage for Type 1 and Type 2 diabetes.",
+      "common_dosage": "10-80 units subcutaneous injection once daily",
+      "max_daily_dose": "Individualized",
+      "side_effects": ["Hypoglycemia", "Weight gain", "Injection site reactions", "Lipodystrophy"],
+      "warnings": ["Never share insulin pens", "Rotate injection sites", "Store in fridge (unopened)", "Monitor blood sugar regularly"]
+    },
+    "lisinopril": {
+      "generic_name": "Lisinopril",
+      "brand_names": ["Listril", "Lipril", "Zestril"],
+      "category": "ACE Inhibitor (Antihypertensive)",
+      "description": "Treats high blood pressure and heart failure. Protects kidneys in diabetic patients.",
+      "common_dosage": "5mg - 40mg once daily",
+      "max_daily_dose": "80mg",
+      "side_effects": ["Dry cough", "Dizziness", "Headache", "High potassium"],
+      "warnings": ["Do NOT use in pregnancy", "Monitor potassium and kidney function", "Dry cough is common and harmless"]
+    },
+    "furosemide": {
+      "generic_name": "Furosemide",
+      "brand_names": ["Lasix", "Frusenex", "Frusemide"],
+      "category": "Loop Diuretic",
+      "description": "Removes excess fluid from the body. Treats swelling (edema) in heart failure, liver disease, and kidney disease.",
+      "common_dosage": "20mg - 80mg once or twice daily",
+      "max_daily_dose": "600mg",
+      "side_effects": ["Frequent urination", "Dizziness", "Dehydration", "Low potassium", "Muscle cramps"],
+      "warnings": ["Take in the morning", "Monitor electrolytes regularly", "Stay hydrated", "Can cause hearing damage at very high IV doses"]
+    },
+    "spironolactone": {
+      "generic_name": "Spironolactone",
+      "brand_names": ["Aldactone", "Spiromide", "Lasilactone"],
+      "category": "Potassium-sparing Diuretic / Aldosterone Antagonist",
+      "description": "Treats heart failure, high blood pressure, and fluid retention. Also used for hormonal acne and PCOS.",
+      "common_dosage": "25mg - 100mg daily",
+      "max_daily_dose": "400mg",
+      "side_effects": ["High potassium", "Breast tenderness", "Dizziness", "Nausea", "Menstrual irregularities"],
+      "warnings": ["Monitor potassium levels closely", "Avoid potassium-rich foods", "Do NOT use in pregnancy"]
+    },
+    "hydrochlorothiazide": {
+      "generic_name": "Hydrochlorothiazide",
+      "brand_names": ["Aquazide", "HydroDiuril", "Telma-H (combo)", "Losar-H (combo)"],
+      "category": "Thiazide Diuretic",
+      "description": "Treats high blood pressure and fluid retention. Often combined with ARBs or ACE inhibitors.",
+      "common_dosage": "12.5mg - 50mg once daily",
+      "max_daily_dose": "50mg",
+      "side_effects": ["Frequent urination", "Dizziness", "Low potassium", "Increased blood sugar", "Sun sensitivity"],
+      "warnings": ["Take in the morning", "Monitor electrolytes", "Can worsen diabetes and gout"]
+    },
+    "nifedipine": {
+      "generic_name": "Nifedipine",
+      "brand_names": ["Calcigard", "Adalat", "Depin"],
+      "category": "Calcium Channel Blocker (Antihypertensive)",
+      "description": "Treats high blood pressure and Raynaud's phenomenon. Relaxes blood vessels.",
+      "common_dosage": "30mg - 60mg once daily (sustained release)",
+      "max_daily_dose": "120mg",
+      "side_effects": ["Headache", "Flushing", "Swollen ankles", "Dizziness", "Rapid heartbeat"],
+      "warnings": ["Do not crush extended-release tablets", "Avoid grapefruit", "May cause reflex tachycardia"]
+    },
+    "carvedilol": {
+      "generic_name": "Carvedilol",
+      "brand_names": ["Carca", "Cardivas", "Coreg"],
+      "category": "Beta Blocker (Alpha+Beta)",
+      "description": "Treats heart failure and high blood pressure. Blocks both alpha and beta receptors.",
+      "common_dosage": "3.125mg - 25mg twice daily",
+      "max_daily_dose": "50mg",
+      "side_effects": ["Dizziness", "Fatigue", "Low blood pressure", "Slow heart rate", "Weight gain"],
+      "warnings": ["Take with food", "Do not stop suddenly", "Stand up slowly to avoid dizziness"]
+    },
+    "phenytoin": {
+      "generic_name": "Phenytoin",
+      "brand_names": ["Eptoin", "Dilantin", "Phenytek"],
+      "category": "Anticonvulsant",
+      "description": "Controls seizures (epilepsy). Stabilizes electrical activity in the brain.",
+      "common_dosage": "100mg two or three times daily",
+      "max_daily_dose": "600mg",
+      "side_effects": ["Dizziness", "Drowsiness", "Gum overgrowth", "Acne", "Coordination problems"],
+      "warnings": ["Narrow therapeutic window (blood level monitoring needed)", "Many drug interactions", "Can cause birth defects"]
+    },
+    "sodium_valproate": {
+      "generic_name": "Sodium Valproate",
+      "brand_names": ["Encorate", "Valparin", "Depakote", "Epilex"],
+      "category": "Anticonvulsant / Mood Stabilizer",
+      "description": "Treats epilepsy, bipolar disorder, and migraine prevention.",
+      "common_dosage": "200mg - 500mg twice daily",
+      "max_daily_dose": "2500mg",
+      "side_effects": ["Nausea", "Weight gain", "Tremor", "Hair thinning", "Drowsiness"],
+      "warnings": ["Do NOT use in pregnancy (birth defects)", "Monitor liver function", "Can cause pancreatitis (rare)"]
+    },
+    "pioglitazone": {
+      "generic_name": "Pioglitazone",
+      "brand_names": ["Pioz", "Actos", "Piozone"],
+      "category": "Thiazolidinedione (Antidiabetic)",
+      "description": "Treats Type 2 diabetes by improving insulin sensitivity in muscles and fat tissue.",
+      "common_dosage": "15mg - 45mg once daily",
+      "max_daily_dose": "45mg",
+      "side_effects": ["Weight gain", "Swelling (edema)", "Bone fractures (women)", "Headache"],
+      "warnings": ["Can worsen heart failure", "Monitor for bladder cancer symptoms", "Avoid in liver disease"]
+    },
+    "aceclofenac": {
+      "generic_name": "Aceclofenac",
+      "brand_names": ["Hifenac", "Acemiz", "Zerodol", "Dolowin"],
+      "category": "NSAID",
+      "description": "Treats pain and inflammation from arthritis, dental pain, and musculoskeletal conditions.",
+      "common_dosage": "100mg twice daily",
+      "max_daily_dose": "200mg",
+      "side_effects": ["Stomach pain", "Nausea", "Diarrhea", "Dizziness"],
+      "warnings": ["Take with food", "Avoid in heart, kidney, or liver disease", "Short-term use preferred"]
+    },
+    "etoricoxib": {
+      "generic_name": "Etoricoxib",
+      "brand_names": ["Nucoxia", "Arcoxia", "Etody", "Etoshine"],
+      "category": "COX-2 Selective NSAID",
+      "description": "Treats arthritis pain, gout attacks, and dental pain. Causes fewer stomach problems than traditional NSAIDs.",
+      "common_dosage": "60mg - 120mg once daily",
+      "max_daily_dose": "120mg",
+      "side_effects": ["Headache", "Dizziness", "Swelling", "High blood pressure"],
+      "warnings": ["Higher cardiovascular risk than other NSAIDs", "Avoid in heart disease", "Not for long-term use"]
+    },
+    "rabeprazole": {
+      "generic_name": "Rabeprazole",
+      "brand_names": ["Razo", "Rablet", "Rabeloc", "Happi"],
+      "category": "Proton Pump Inhibitor (PPI)",
+      "description": "Reduces stomach acid. Treats acid reflux, GERD, peptic ulcers, and H. pylori infection.",
+      "common_dosage": "20mg once daily",
+      "max_daily_dose": "20mg (40mg for severe cases)",
+      "side_effects": ["Headache", "Diarrhea", "Nausea", "Flatulence"],
+      "warnings": ["Take before meals", "Long-term use may cause bone loss and B12 deficiency"]
+    }
+  },
+  "interactions": [
+    {
+      "drug_a": "warfarin",
+      "drug_b": "aspirin",
+      "severity": "CRITICAL",
+      "description": "Greatly increases risk of serious bleeding. Aspirin inhibits platelet function while warfarin blocks clotting factors. Combined effect can cause life-threatening hemorrhage.",
+      "recommendation": "Avoid combination unless specifically prescribed by cardiologist. Seek immediate medical advice."
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "ibuprofen",
+      "severity": "CRITICAL",
+      "description": "NSAIDs increase bleeding risk and can cause GI ulcers. Combined with warfarin, risk of GI hemorrhage increases 3-6 times.",
+      "recommendation": "Avoid combination. Use paracetamol for pain instead."
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "paracetamol",
+      "severity": "MODERATE",
+      "description": "High-dose or prolonged paracetamol use may increase INR and bleeding risk with warfarin.",
+      "recommendation": "Safe in low doses for short periods. Monitor INR if using regularly."
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "azithromycin",
+      "severity": "SERIOUS",
+      "description": "Azithromycin may increase warfarin levels by inhibiting its metabolism, leading to elevated INR and bleeding risk.",
+      "recommendation": "Monitor INR closely during and after antibiotic course."
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "ciprofloxacin",
+      "severity": "SERIOUS",
+      "description": "Ciprofloxacin inhibits CYP1A2 enzyme, increasing warfarin concentration and bleeding risk significantly.",
+      "recommendation": "Monitor INR very closely. Consider dose reduction of warfarin."
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "diclofenac",
+      "severity": "CRITICAL",
+      "description": "Diclofenac increases GI bleeding risk and interferes with platelet function. Extremely dangerous with warfarin.",
+      "recommendation": "AVOID. Use paracetamol for pain instead."
+    },
+    {
+      "drug_a": "clopidogrel",
+      "drug_b": "omeprazole",
+      "severity": "SERIOUS",
+      "description": "Omeprazole inhibits CYP2C19, reducing conversion of clopidogrel to its active form. May decrease antiplatelet effectiveness by 25-50%.",
+      "recommendation": "Use pantoprazole instead of omeprazole with clopidogrel."
+    },
+    {
+      "drug_a": "clopidogrel",
+      "drug_b": "aspirin",
+      "severity": "MODERATE",
+      "description": "Dual antiplatelet therapy increases bleeding risk but is intentionally prescribed after heart stents. Monitor for signs of bleeding.",
+      "recommendation": "Only use together if prescribed by cardiologist. Watch for unusual bruising or bleeding."
+    },
+    {
+      "drug_a": "metformin",
+      "drug_b": "ciprofloxacin",
+      "severity": "SERIOUS",
+      "description": "Ciprofloxacin can cause unpredictable blood sugar changes (both hypo and hyperglycemia) when combined with metformin.",
+      "recommendation": "Monitor blood sugar closely during antibiotic course."
+    },
+    {
+      "drug_a": "metformin",
+      "drug_b": "glimepiride",
+      "severity": "MODERATE",
+      "description": "Combined use increases risk of hypoglycemia (dangerously low blood sugar). However, this is a common intentional combination in diabetes management.",
+      "recommendation": "Often prescribed together. Monitor blood sugar regularly. Carry glucose tablets."
+    },
+    {
+      "drug_a": "aspirin",
+      "drug_b": "ibuprofen",
+      "severity": "SERIOUS",
+      "description": "Ibuprofen can block aspirin's cardioprotective antiplatelet effect. Also increases risk of GI bleeding when both are used.",
+      "recommendation": "If taking low-dose aspirin for heart protection, take it 30 minutes BEFORE ibuprofen. Avoid regular combined use."
+    },
+    {
+      "drug_a": "aspirin",
+      "drug_b": "diclofenac",
+      "severity": "SERIOUS",
+      "description": "Both are NSAIDs — combined use greatly increases risk of stomach ulcers and GI bleeding without additional pain benefit.",
+      "recommendation": "AVOID using two NSAIDs together. Choose one."
+    },
+    {
+      "drug_a": "ibuprofen",
+      "drug_b": "diclofenac",
+      "severity": "SERIOUS",
+      "description": "Two NSAIDs together double the risk of GI bleeding and kidney damage without additional pain relief.",
+      "recommendation": "NEVER combine two NSAIDs. Choose one and use at lowest effective dose."
+    },
+    {
+      "drug_a": "ibuprofen",
+      "drug_b": "losartan",
+      "severity": "SERIOUS",
+      "description": "NSAIDs reduce the blood-pressure-lowering effect of ARBs and increase risk of kidney damage, especially in dehydrated patients.",
+      "recommendation": "Use paracetamol for pain instead. If NSAID necessary, use shortest course and monitor kidney function."
+    },
+    {
+      "drug_a": "ibuprofen",
+      "drug_b": "amlodipine",
+      "severity": "MODERATE",
+      "description": "NSAIDs can reduce the blood-pressure-lowering effect of calcium channel blockers.",
+      "recommendation": "Monitor blood pressure. Use paracetamol if possible."
+    },
+    {
+      "drug_a": "fluoxetine",
+      "drug_b": "tramadol",
+      "severity": "CRITICAL",
+      "description": "Both increase serotonin levels. Combined use can cause serotonin syndrome — a potentially fatal condition with symptoms including agitation, rapid heartbeat, high temperature, and seizures.",
+      "recommendation": "AVOID combination. If pain management needed, use non-serotonergic alternatives."
+    },
+    {
+      "drug_a": "fluoxetine",
+      "drug_b": "ibuprofen",
+      "severity": "MODERATE",
+      "description": "SSRIs increase the risk of GI bleeding, especially when combined with NSAIDs.",
+      "recommendation": "Consider adding a stomach protector (PPI) if both are necessary."
+    },
+    {
+      "drug_a": "fluoxetine",
+      "drug_b": "warfarin",
+      "severity": "SERIOUS",
+      "description": "Fluoxetine inhibits CYP2C9, increasing warfarin levels and bleeding risk. SSRIs also impair platelet function independently.",
+      "recommendation": "Monitor INR closely when starting or stopping fluoxetine."
+    },
+    {
+      "drug_a": "fluoxetine",
+      "drug_b": "dextromethorphan",
+      "severity": "SERIOUS",
+      "description": "Both increase serotonin. Fluoxetine also inhibits CYP2D6, slowing dextromethorphan metabolism. Risk of serotonin syndrome.",
+      "recommendation": "Avoid cough syrups containing dextromethorphan while on fluoxetine."
+    },
+    {
+      "drug_a": "amlodipine",
+      "drug_b": "atorvastatin",
+      "severity": "MODERATE",
+      "description": "Amlodipine increases atorvastatin blood levels by ~40%, increasing the risk of statin side effects (muscle pain, rhabdomyolysis).",
+      "recommendation": "Limit atorvastatin to 20mg daily when combined with amlodipine."
+    },
+    {
+      "drug_a": "metoprolol",
+      "drug_b": "amlodipine",
+      "severity": "MODERATE",
+      "description": "Both lower blood pressure and heart rate. Combined use may cause excessive bradycardia (slow heart rate) or hypotension.",
+      "recommendation": "Often used together intentionally. Monitor heart rate and blood pressure regularly."
+    },
+    {
+      "drug_a": "levothyroxine",
+      "drug_b": "omeprazole",
+      "severity": "MODERATE",
+      "description": "PPIs reduce stomach acid needed for levothyroxine absorption, potentially decreasing thyroid hormone levels.",
+      "recommendation": "Take levothyroxine at least 4 hours before omeprazole. Monitor TSH levels."
+    },
+    {
+      "drug_a": "levothyroxine",
+      "drug_b": "metformin",
+      "severity": "MINOR",
+      "description": "Metformin may slightly reduce TSH levels in hypothyroid patients on levothyroxine, potentially causing subclinical hyperthyroidism.",
+      "recommendation": "Monitor TSH when starting metformin. Usually not clinically significant."
+    },
+    {
+      "drug_a": "ciprofloxacin",
+      "drug_b": "prednisolone",
+      "severity": "SERIOUS",
+      "description": "Both fluoroquinolones and corticosteroids increase the risk of tendon damage and rupture, especially in patients over 60.",
+      "recommendation": "Avoid combination if possible. If necessary, monitor for tendon pain. Stop immediately if symptoms appear."
+    },
+    {
+      "drug_a": "gabapentin",
+      "drug_b": "tramadol",
+      "severity": "SERIOUS",
+      "description": "Both cause CNS depression. Combined use increases risk of sedation, respiratory depression, and dizziness.",
+      "recommendation": "If used together, start with lower doses and monitor closely for excessive sedation."
+    },
+    {
+      "drug_a": "hydroxychloroquine",
+      "drug_b": "azithromycin",
+      "severity": "SERIOUS",
+      "description": "Both can prolong the QT interval on ECG, increasing risk of dangerous heart arrhythmias (Torsades de Pointes).",
+      "recommendation": "Avoid combination. If necessary, obtain baseline ECG and monitor."
+    },
+    {
+      "drug_a": "telmisartan",
+      "drug_b": "ibuprofen",
+      "severity": "SERIOUS",
+      "description": "NSAIDs reduce the blood-pressure-lowering effect of ARBs and increase risk of acute kidney injury.",
+      "recommendation": "Use paracetamol for pain instead. Ensure adequate hydration."
+    },
+    {
+      "drug_a": "prednisolone",
+      "drug_b": "ibuprofen",
+      "severity": "SERIOUS",
+      "description": "Both increase the risk of GI ulcers and bleeding. Combined risk is significantly higher than either alone.",
+      "recommendation": "Add a PPI (like omeprazole) for stomach protection if both are necessary."
+    },
+    {
+      "drug_a": "prednisolone",
+      "drug_b": "metformin",
+      "severity": "MODERATE",
+      "description": "Corticosteroids raise blood sugar, counteracting metformin's glucose-lowering effect. May require diabetes medication adjustment.",
+      "recommendation": "Monitor blood sugar more frequently. Dose adjustment of metformin may be needed."
+    },
+    {
+      "drug_a": "cetirizine",
+      "drug_b": "gabapentin",
+      "severity": "MODERATE",
+      "description": "Both cause drowsiness and CNS depression. Combined use may cause excessive sedation.",
+      "recommendation": "Avoid driving or operating machinery. Consider using a less sedating antihistamine."
+    },
+    {
+      "drug_a": "aspirin",
+      "drug_b": "metoprolol",
+      "severity": "MINOR",
+      "description": "Aspirin may slightly reduce the blood-pressure-lowering effect of beta-blockers at high doses.",
+      "recommendation": "Usually not clinically significant at low-dose aspirin (75-150mg). Monitor blood pressure."
+    },
+    {
+      "drug_a": "losartan",
+      "drug_b": "telmisartan",
+      "severity": "CRITICAL",
+      "description": "Do NOT combine two ARBs. Dual ARB therapy provides no additional benefit but significantly increases risk of hypotension, hyperkalemia, and renal failure.",
+      "recommendation": "NEVER use two ARBs together. Choose one."
+    },
+    {
+      "drug_a": "amoxicillin",
+      "drug_b": "warfarin",
+      "severity": "MODERATE",
+      "description": "Amoxicillin may increase INR and bleeding risk by affecting gut bacteria that produce vitamin K.",
+      "recommendation": "Monitor INR during and after antibiotic course."
+    },
+    {
+      "drug_a": "tramadol",
+      "drug_b": "dextromethorphan",
+      "severity": "SERIOUS",
+      "description": "Both have serotonergic activity. Combined use increases risk of serotonin syndrome and seizures.",
+      "recommendation": "Avoid combination. Use non-serotonergic cough medication."
+    },
+    {
+      "drug_a": "glimepiride",
+      "drug_b": "ciprofloxacin",
+      "severity": "SERIOUS",
+      "description": "Ciprofloxacin can enhance the blood-sugar-lowering effect of glimepiride, causing severe hypoglycemia.",
+      "recommendation": "Monitor blood sugar very frequently. Reduce glimepiride dose if needed."
+    },
+    {
+      "drug_a": "montelukast",
+      "drug_b": "fluoxetine",
+      "severity": "MINOR",
+      "description": "Both have been associated with neuropsychiatric effects (mood changes, anxiety). Combined use may increase this risk.",
+      "recommendation": "Monitor for mood or behavioral changes. Report any new symptoms."
+    }
+  ]
+}
