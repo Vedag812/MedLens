@@ -15,7 +15,6 @@
 </head>
 <body>
     <div id="app">
-        <!-- Header -->
         <header id="header">
             <div class="header-content">
                 <div class="logo">
@@ -26,7 +25,6 @@
             </div>
         </header>
 
-        <!-- Tab Navigation -->
         <nav id="tab-nav">
             <button class="tab active" data-tab="scan" id="tab-scan">
                 <span class="tab-icon">📷</span>
@@ -41,12 +39,15 @@
                 <span class="tab-icon">⚠️</span>
                 <span class="tab-label">Interactions</span>
             </button>
+            <button class="tab" data-tab="analytics" id="tab-analytics">
+                <span class="tab-icon">📊</span>
+                <span class="tab-label">Analytics</span>
+            </button>
         </nav>
 
         <!-- Scan Tab -->
         <section id="scan-section" class="tab-content active">
             <div class="scan-area">
-                <!-- Camera / Upload -->
                 <div class="camera-container" id="camera-container">
                     <video id="camera-feed" autoplay playsinline></video>
                     <canvas id="camera-canvas" style="display:none"></canvas>
@@ -54,16 +55,24 @@
                         <div class="scan-frame"></div>
                         <p class="scan-hint">Place medicine strip or bottle inside the frame</p>
                     </div>
+                    <div class="camera-error" id="camera-error" style="display:none">
+                        <p>📷 Camera not available</p>
+                        <p class="small">Upload a photo or type the name below</p>
+                    </div>
                 </div>
-
                 <div class="scan-controls">
-                    <button class="btn btn-primary btn-capture" id="btn-capture">
-                        <span class="btn-icon">📸</span> Capture & Scan
+                    <button class="btn btn-autoscan" id="btn-autoscan" onclick="toggleAutoScan()">
+                        <span class="btn-icon">🔄</span> Auto-Scan
                     </button>
-                    <label class="btn btn-secondary btn-upload" id="btn-upload-label">
-                        <span class="btn-icon">📁</span> Upload Photo
-                        <input type="file" accept="image/*" id="file-input" style="display:none">
-                    </label>
+                    <div class="scan-buttons-row">
+                        <button class="btn btn-primary btn-capture" id="btn-capture">
+                            <span class="btn-icon">📸</span> Capture
+                        </button>
+                        <label class="btn btn-secondary btn-upload" id="btn-upload-label">
+                            <span class="btn-icon">📁</span> Upload
+                            <input type="file" accept="image/*" capture="environment" id="file-input" style="display:none">
+                        </label>
+                    </div>
                     <div class="text-fallback">
                         <p class="fallback-label">Or type the medicine name directly:</p>
                         <div class="text-input-row">
@@ -73,8 +82,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Results Area -->
             <div id="results-area" style="display:none">
                 <div class="results-header">
                     <h2>Results</h2>
@@ -82,8 +89,6 @@
                 </div>
                 <div id="results-list"></div>
             </div>
-
-            <!-- Loading Spinner -->
             <div id="loading" class="loading-overlay" style="display:none">
                 <div class="spinner"></div>
                 <p>Scanning your medicine...</p>
@@ -94,27 +99,73 @@
         <section id="vault-section" class="tab-content">
             <div class="vault-header">
                 <h2>My Medication Vault</h2>
-                <p class="vault-description">Your saved medications are stored on this device. Every time you scan a new medicine, it gets checked against everything in this list.</p>
+                <p class="vault-description">Your saved medications. Every new scan gets checked against this list for interactions.</p>
             </div>
             <div id="vault-list" class="vault-list">
                 <div class="vault-empty" id="vault-empty">
                     <span class="empty-icon">💊</span>
                     <p>No medications saved yet.</p>
-                    <p class="empty-hint">Scan a medicine and tap "Add to My Meds" to start building your list.</p>
+                    <p class="empty-hint">Scan a medicine and tap "Add to My Meds" to start.</p>
+                </div>
+            </div>
+            <!-- Risk Score Section -->
+            <div id="risk-section" style="display:none">
+                <div class="risk-card" id="risk-card">
+                    <h3>Personalized Risk Score</h3>
+                    <div class="risk-config">
+                        <label>Age Group:
+                            <select id="age-group">
+                                <option value="child">Child (under 12)</option>
+                                <option value="adult" selected>Adult (12-65)</option>
+                                <option value="elderly">Elderly (65+)</option>
+                            </select>
+                        </label>
+                        <label>Health Conditions:
+                            <select id="conditions" multiple>
+                                <option value="none" selected>None</option>
+                                <option value="liver_disease">Liver Disease</option>
+                                <option value="kidney_disease">Kidney Disease</option>
+                                <option value="heart_disease">Heart Disease</option>
+                                <option value="diabetes">Diabetes</option>
+                                <option value="pregnancy">Pregnancy</option>
+                            </select>
+                        </label>
+                        <button class="btn btn-primary btn-small" id="btn-calc-risk" onclick="calculateRisk()">Calculate Risk</button>
+                    </div>
+                    <div id="risk-result"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Matrix Tab -->
+        <!-- Interactions Tab -->
         <section id="matrix-section" class="tab-content">
             <div class="matrix-header">
                 <h2>Interaction Check</h2>
-                <p class="matrix-description">This shows every interaction between your saved medications. Pairs with no known issues are not listed.</p>
+                <p class="matrix-description">Every interaction between your saved medications. Pairs with no known issues are not listed.</p>
             </div>
             <div id="matrix-results"></div>
             <div class="matrix-empty" id="matrix-empty">
                 <span class="empty-icon">✅</span>
-                <p>Add at least 2 medications to your vault to check for interactions.</p>
+                <p>Add at least 2 medications to check for interactions.</p>
+            </div>
+        </section>
+
+        <!-- Analytics Tab -->
+        <section id="analytics-section" class="tab-content">
+            <div class="analytics-header">
+                <h2>Drug Interaction Knowledge Graph</h2>
+                <p class="analytics-description">Network analysis of 55 drugs and their interactions. Powered by graph analytics (centrality, community detection).</p>
+            </div>
+            <div id="analytics-content">
+                <div class="analytics-stats" id="analytics-stats"></div>
+                <div class="graph-container">
+                    <canvas id="graph-canvas" width="460" height="400"></canvas>
+                </div>
+                <div class="danger-ranking" id="danger-ranking"></div>
+                <div class="vault-graph-section" id="vault-graph-section" style="display:none">
+                    <h3>Your Medication Subgraph</h3>
+                    <div id="vault-graph-analysis"></div>
+                </div>
             </div>
         </section>
 
@@ -127,7 +178,6 @@
             </div>
         </div>
     </div>
-
     <script src="/static/app.js"></script>
 </body>
 </html>

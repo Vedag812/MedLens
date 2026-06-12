@@ -549,6 +549,106 @@
       "max_daily_dose": "20mg (40mg for severe cases)",
       "side_effects": ["Headache", "Diarrhea", "Nausea", "Flatulence"],
       "warnings": ["Take before meals", "Long-term use may cause bone loss and B12 deficiency"]
+    },
+    "dapagliflozin": {
+      "generic_name": "Dapagliflozin",
+      "brand_names": ["Dapazol", "Dapagold", "Forxiga", "Oxra", "Dapanorm", "Dapaflo"],
+      "category": "SGLT2 Inhibitor (Antidiabetic)",
+      "description": "Treats Type 2 diabetes by making the kidneys remove excess sugar through urine. Also reduces risk of heart failure and kidney disease progression.",
+      "common_dosage": "10mg once daily",
+      "max_daily_dose": "10mg",
+      "side_effects": ["Urinary tract infections", "Genital yeast infections", "Increased urination", "Dehydration", "Dizziness"],
+      "warnings": ["Drink plenty of water", "Risk of diabetic ketoacidosis (rare but serious)", "Not for Type 1 diabetes", "Stop before surgery"]
+    },
+    "metronidazole": {
+      "generic_name": "Metronidazole",
+      "brand_names": ["Flagyl", "Metrogyl", "Metro", "Aristogyl"],
+      "category": "Antibiotic / Antiprotozoal",
+      "description": "Treats bacterial and parasitic infections including dental infections, H. pylori, amoebiasis, and giardiasis.",
+      "common_dosage": "400mg three times daily",
+      "max_daily_dose": "2400mg",
+      "side_effects": ["Nausea", "Metallic taste", "Loss of appetite", "Headache", "Dark urine"],
+      "warnings": ["ABSOLUTELY NO ALCOHOL (severe vomiting reaction)", "Complete the full course", "May cause numbness in hands/feet with long-term use"]
+    },
+    "ondansetron": {
+      "generic_name": "Ondansetron",
+      "brand_names": ["Emeset", "Ondem", "Vomikind", "Zofer"],
+      "category": "Antiemetic (5-HT3 Antagonist)",
+      "description": "Prevents nausea and vomiting caused by chemotherapy, surgery, or gastroenteritis. Works by blocking serotonin in the gut.",
+      "common_dosage": "4mg - 8mg every 8 hours as needed",
+      "max_daily_dose": "24mg",
+      "side_effects": ["Headache", "Constipation", "Fatigue", "Dizziness"],
+      "warnings": ["Can cause QT prolongation at high doses", "Use lowest effective dose", "Watch for serotonin syndrome if combined with SSRIs"]
+    },
+    "calcium_carbonate_d3": {
+      "generic_name": "Calcium + Vitamin D3",
+      "brand_names": ["Shelcal", "Calcimax", "Gemcal", "CCM", "Tata 1mg Calcium"],
+      "category": "Calcium and Vitamin D Supplement",
+      "description": "Prevents and treats calcium deficiency and weak bones (osteoporosis). Vitamin D3 helps the body absorb calcium properly.",
+      "common_dosage": "500mg calcium + 250 IU D3 once or twice daily",
+      "max_daily_dose": "1500mg calcium",
+      "side_effects": ["Constipation", "Bloating", "Gas", "Nausea"],
+      "warnings": ["Take with food for better absorption", "Space 2 hours away from thyroid medication", "Excess calcium can cause kidney stones"]
+    },
+    "b_complex": {
+      "generic_name": "Vitamin B Complex",
+      "brand_names": ["Becosules", "Becadexamin", "Neurobion Forte", "Polybion", "Cobadex"],
+      "category": "Vitamin Supplement",
+      "description": "Contains essential B vitamins (B1, B2, B3, B5, B6, B7, B9, B12) that support nerve function, energy production, and red blood cell formation.",
+      "common_dosage": "1 capsule daily",
+      "max_daily_dose": "1 capsule",
+      "side_effects": ["Bright yellow urine (harmless)", "Nausea (if taken on empty stomach)", "Mild stomach upset"],
+      "warnings": ["Take with or after food", "Generally very safe", "Yellow urine is normal and harmless"]
+    },
+    "ferrous_sulfate": {
+      "generic_name": "Ferrous Sulfate (Iron)",
+      "brand_names": ["Autrin", "Fefol", "Orofer", "Livogen", "Tonoferon"],
+      "category": "Iron Supplement",
+      "description": "Treats and prevents iron deficiency anemia. Essential for hemoglobin production and oxygen transport in blood.",
+      "common_dosage": "325mg (65mg elemental iron) once or twice daily",
+      "max_daily_dose": "650mg",
+      "side_effects": ["Constipation", "Dark/black stools (harmless)", "Nausea", "Stomach pain"],
+      "warnings": ["Take on empty stomach with vitamin C for best absorption", "Black stools are normal", "Keep away from children (iron overdose is dangerous)"]
+    },
+    "loperamide": {
+      "generic_name": "Loperamide",
+      "brand_names": ["Imodium", "Eldoper", "Lopamide", "Roko"],
+      "category": "Antidiarrheal",
+      "description": "Slows down bowel movements to treat acute diarrhea. Does not treat the underlying infection.",
+      "common_dosage": "4mg initially, then 2mg after each loose stool",
+      "max_daily_dose": "16mg",
+      "side_effects": ["Constipation", "Abdominal cramps", "Dizziness", "Nausea"],
+      "warnings": ["Do NOT use if fever or bloody diarrhea is present", "Not for children under 2", "Can cause dangerous heart rhythm issues if overdosed"]
+    },
+    "chlorpheniramine": {
+      "generic_name": "Chlorpheniramine",
+      "brand_names": ["Piriton", "Avil (pheniramine)", "Polaramine", "Sinarest (combo)"],
+      "category": "Antihistamine (1st generation)",
+      "description": "Treats allergies, common cold symptoms, and hay fever. Causes significant drowsiness compared to newer antihistamines.",
+      "common_dosage": "4mg every 4-6 hours",
+      "max_daily_dose": "24mg",
+      "side_effects": ["Drowsiness (strong)", "Dry mouth", "Blurred vision", "Urinary retention"],
+      "warnings": ["Causes significant drowsiness, do not drive", "Avoid alcohol", "Not recommended for elderly (fall risk)"]
+    },
+    "deriphylline": {
+      "generic_name": "Etofylline + Theophylline",
+      "brand_names": ["Deriphyllin", "Deriphyllin Retard", "Etophylline"],
+      "category": "Bronchodilator (Methylxanthine)",
+      "description": "Opens airways in asthma and COPD. Contains a combination of two xanthine derivatives for sustained bronchodilation.",
+      "common_dosage": "1 tablet two or three times daily",
+      "max_daily_dose": "3 tablets",
+      "side_effects": ["Nausea", "Headache", "Palpitations", "Insomnia", "Tremor"],
+      "warnings": ["Narrow therapeutic window", "Avoid caffeine (same drug class)", "Monitor blood levels if on long-term use"]
+    },
+    "norfloxacin": {
+      "generic_name": "Norfloxacin",
+      "brand_names": ["Norflox", "Uroflox", "Norbactin", "Norflox-TZ (with tinidazole)"],
+      "category": "Antibiotic (Fluoroquinolone)",
+      "description": "Treats urinary tract infections and gastrointestinal infections. Often combined with tinidazole for traveler's diarrhea.",
+      "common_dosage": "400mg twice daily",
+      "max_daily_dose": "800mg",
+      "side_effects": ["Nausea", "Headache", "Dizziness", "Rash", "Tendon pain"],
+      "warnings": ["FDA black box warning for tendon rupture", "Take 1 hour before or 2 hours after meals", "Avoid antacids and dairy within 2 hours"]
     }
   },
   "interactions": [
@@ -803,6 +903,139 @@
       "severity": "MINOR",
       "description": "Both have been associated with neuropsychiatric effects (mood changes, anxiety). Combined use may increase this risk.",
       "recommendation": "Monitor for mood or behavioral changes. Report any new symptoms."
+    },
+    {
+      "drug_a": "alprazolam",
+      "drug_b": "tramadol",
+      "severity": "CRITICAL",
+      "description": "Both cause severe CNS depression. Combined use significantly increases risk of respiratory depression, profound sedation, coma, and death.",
+      "recommendation": "AVOID. This combination has caused fatal overdoses. If absolutely needed, use lowest possible doses with close monitoring."
+    },
+    {
+      "drug_a": "sertraline",
+      "drug_b": "tramadol",
+      "severity": "CRITICAL",
+      "description": "Both increase serotonin levels. Risk of serotonin syndrome which can be fatal. Symptoms include agitation, high fever, rapid heart rate, and muscle rigidity.",
+      "recommendation": "AVOID combination. Use non-serotonergic pain relief instead."
+    },
+    {
+      "drug_a": "clonazepam",
+      "drug_b": "gabapentin",
+      "severity": "SERIOUS",
+      "description": "Both cause CNS depression and sedation. Combined use significantly increases risk of excessive drowsiness, respiratory depression, and falls.",
+      "recommendation": "If used together, start with lowest doses. Do not drive. Elderly patients are at highest risk."
+    },
+    {
+      "drug_a": "phenytoin",
+      "drug_b": "warfarin",
+      "severity": "SERIOUS",
+      "description": "Phenytoin can both increase and decrease warfarin levels unpredictably through complex CYP enzyme interactions. INR can swing dangerously.",
+      "recommendation": "Monitor INR very frequently when starting, stopping, or adjusting phenytoin dose."
+    },
+    {
+      "drug_a": "furosemide",
+      "drug_b": "lisinopril",
+      "severity": "MODERATE",
+      "description": "First-dose hypotension can occur when adding an ACE inhibitor to a patient already on a diuretic. Risk of dizziness and fainting.",
+      "recommendation": "Start lisinopril at a low dose. Consider holding furosemide for 2-3 days before starting ACE inhibitor."
+    },
+    {
+      "drug_a": "spironolactone",
+      "drug_b": "lisinopril",
+      "severity": "SERIOUS",
+      "description": "Both increase potassium levels. Combined use creates a high risk of dangerous hyperkalemia which can cause fatal cardiac arrhythmias.",
+      "recommendation": "Monitor potassium levels closely and frequently. Avoid potassium supplements and potassium-rich salt substitutes."
+    },
+    {
+      "drug_a": "escitalopram",
+      "drug_b": "tramadol",
+      "severity": "CRITICAL",
+      "description": "Both increase serotonin. Serotonin syndrome risk is significant. Can cause dangerous fever, seizures, and cardiovascular instability.",
+      "recommendation": "AVOID combination. Choose a non-serotonergic pain medication."
+    },
+    {
+      "drug_a": "amitriptyline",
+      "drug_b": "tramadol",
+      "severity": "CRITICAL",
+      "description": "Both increase seizure risk and serotonin levels. Combined use has caused fatal serotonin syndrome and seizures.",
+      "recommendation": "AVOID. Extremely dangerous combination. Use alternative pain management."
+    },
+    {
+      "drug_a": "amitriptyline",
+      "drug_b": "fluoxetine",
+      "severity": "SERIOUS",
+      "description": "Fluoxetine inhibits CYP2D6, causing amitriptyline levels to rise 2-4 times higher than normal. Increased risk of heart rhythm problems and excessive sedation.",
+      "recommendation": "If combined, reduce amitriptyline dose significantly and monitor ECG."
+    },
+    {
+      "drug_a": "doxycycline",
+      "drug_b": "warfarin",
+      "severity": "SERIOUS",
+      "description": "Doxycycline can increase warfarin's anticoagulant effect by disrupting gut flora that produce vitamin K.",
+      "recommendation": "Monitor INR closely during and after the antibiotic course. Dose reduction of warfarin may be needed."
+    },
+    {
+      "drug_a": "carvedilol",
+      "drug_b": "clonazepam",
+      "severity": "MODERATE",
+      "description": "Both can lower blood pressure. Carvedilol slows heart rate while clonazepam causes sedation. Combined effect increases fall risk.",
+      "recommendation": "Monitor blood pressure. Stand up slowly. Elderly patients need extra caution."
+    },
+    {
+      "drug_a": "phenytoin",
+      "drug_b": "sodium_valproate",
+      "severity": "SERIOUS",
+      "description": "Complex bidirectional interaction. Valproate increases free phenytoin levels while phenytoin reduces valproate levels. Both effects are clinically significant.",
+      "recommendation": "Monitor blood levels of both drugs frequently. Dose adjustments usually needed."
+    },
+    {
+      "drug_a": "insulin_glargine",
+      "drug_b": "metformin",
+      "severity": "MODERATE",
+      "description": "Both lower blood sugar. Combined use increases hypoglycemia risk, especially if meals are skipped or during exercise.",
+      "recommendation": "This is a common and intentional combination. Monitor blood sugar regularly. Carry glucose tablets."
+    },
+    {
+      "drug_a": "aceclofenac",
+      "drug_b": "warfarin",
+      "severity": "CRITICAL",
+      "description": "NSAIDs significantly increase bleeding risk with warfarin. Aceclofenac also damages stomach lining, raising GI hemorrhage risk.",
+      "recommendation": "AVOID. Use paracetamol for pain instead. If NSAID is essential, add a PPI and monitor INR daily."
+    },
+    {
+      "drug_a": "etoricoxib",
+      "drug_b": "warfarin",
+      "severity": "SERIOUS",
+      "description": "Etoricoxib can increase warfarin levels by inhibiting CYP2C9. Also increases cardiovascular risk independently.",
+      "recommendation": "Monitor INR when starting or stopping etoricoxib. Consider reducing warfarin dose."
+    },
+    {
+      "drug_a": "levofloxacin",
+      "drug_b": "prednisolone",
+      "severity": "SERIOUS",
+      "description": "Fluoroquinolones plus corticosteroids dramatically increase tendon rupture risk, especially the Achilles tendon. Risk is highest in patients over 60.",
+      "recommendation": "Avoid this combination when possible. If used, stop immediately if any tendon pain occurs."
+    },
+    {
+      "drug_a": "pioglitazone",
+      "drug_b": "insulin_glargine",
+      "severity": "SERIOUS",
+      "description": "Pioglitazone causes fluid retention. When combined with insulin, the risk of heart failure worsens significantly due to increased fluid overload.",
+      "recommendation": "Monitor for weight gain, swelling, and shortness of breath. Avoid in patients with heart failure."
+    },
+    {
+      "drug_a": "furosemide",
+      "drug_b": "metformin",
+      "severity": "MODERATE",
+      "description": "Furosemide can increase metformin blood levels. Dehydration from the diuretic also raises lactic acidosis risk with metformin.",
+      "recommendation": "Stay well hydrated. Monitor kidney function regularly."
+    },
+    {
+      "drug_a": "alprazolam",
+      "drug_b": "fluoxetine",
+      "severity": "MODERATE",
+      "description": "Fluoxetine inhibits CYP3A4, slowing down alprazolam metabolism. This can increase sedation and impairment beyond what is expected.",
+      "recommendation": "Consider reducing alprazolam dose. Monitor for excessive sedation."
     }
   ]
 }

@@ -37,8 +37,9 @@ def get_ocr():
     if _ocr_engine is None:
         try:
             import easyocr
-            _ocr_engine = easyocr.Reader(["en"], gpu=False, verbose=False)
-            logger.info("EasyOCR loaded successfully")
+            # Support English + Hindi for Indian medicine strips
+            _ocr_engine = easyocr.Reader(["en", "hi"], gpu=False, verbose=False)
+            logger.info("EasyOCR loaded (English + Hindi)")
         except Exception as e:
             logger.warning(f"EasyOCR failed to load: {e}")
             _ocr_engine = "fallback"
